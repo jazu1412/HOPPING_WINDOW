@@ -1,14 +1,14 @@
 
-Hopping Window Mean Aggregation
+# Hopping Window Mean Aggregation
 This project demonstrates the use of a hopping window function to aggregate mean values of temperature readings in a distributed sensor system.
 
-Overview
+# Overview
 In an enterprise distributed environment, the sensor system generates temperature readings every second. To increase throughput and reduce latency, the stream processor aggregates mean values of the sensor readings using a hopping window function.
 
-Hopping Window Function
+# Hopping Window Function
 The hopping window function is implemented in the Hoppingwindow_100periods-1.py file. This script creates a sample time series DataFrame with random values, applies a hopping window to calculate the mean, and visualizes the results.
 
-Parameters
+# Parameters
 window_size: Duration of the window (e.g., '3h' for a 3-hour window).
 hop_size: Interval at which the window hops (e.g., '1h' for a 1-hour hop).
 Example
