@@ -29,7 +29,19 @@ print(df)
 
 df = df.reset_index()
 import matplotlib.pyplot as plt
-plt.plot(df['timestamp'], df['value'], label='Original Data')
-plt.plot(df['timestamp'], df['hopping_mean'], label='Hopping Mean')
+
+# Create the plot with improved styling
+plt.figure(figsize=(12, 6))
+plt.plot(df['timestamp'], df['value'], label='Original Data', linewidth=1)
+plt.plot(df['timestamp'], df['hopping_mean'], label='Hopping Mean', linewidth=1.5)
 plt.legend()
+plt.title('Temperature Readings: Original vs Hopping Window Mean')
+plt.xlabel('Timestamp')
+plt.ylabel('Temperature Value')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot
+plt.savefig('hopping_window_visualization.png', dpi=300, bbox_inches='tight')
 plt.show()
